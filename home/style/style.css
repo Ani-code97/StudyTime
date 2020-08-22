@@ -1,0 +1,309 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  scroll-behavior: smooth; }
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  z-index: 654865555555555555555555555555554;
+  transition: 0.4s; }
+  header .logo {
+    position: absolute;
+    color: #3498db;
+    font-size: 3.4rem;
+    left: 50px;
+    line-height: 100px;
+    font-family: "Black Ops One", cursive;
+    text-decoration: none; }
+  header .sidenav-trigger {
+    position: absolute;
+    color: white;
+    right: 80px;
+    line-height: 100px;
+    display: none; }
+  header #lg-nav {
+    position: absolute;
+    right: 50px;
+    line-height: 100px; }
+    header #lg-nav ul li {
+      display: inline-block;
+      list-style: none;
+      padding: 0 17px;
+      font-size: 1.3rem; }
+      header #lg-nav ul li ul {
+        position: absolute;
+        right: 100px;
+        background: #333;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.4s; }
+        header #lg-nav ul li ul li {
+          display: block;
+          padding: 0px 10px 0px 0px; }
+          header #lg-nav ul li ul li a {
+            color: #dddddd; }
+            header #lg-nav ul li ul li a::after {
+              background: none; }
+      header #lg-nav ul li:hover ul {
+        opacity: 1;
+        pointer-events: all; }
+      header #lg-nav ul li a {
+        position: relative;
+        color: white;
+        opacity: 0.6;
+        text-decoration: none;
+        transition: 0.3s;
+        padding: 8px 0;
+        font-family: "Quicksand", sans-serif; }
+        header #lg-nav ul li a:hover {
+          opacity: 0.8; }
+        header #lg-nav ul li a::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          width: 0;
+          left: 50%;
+          height: 2px;
+          background: #3498db;
+          transition: 0.4s; }
+        header #lg-nav ul li a:hover::after {
+          width: 100%;
+          left: 0; }
+  header .wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: #333333;
+    width: 0;
+    transition: 0.6s;
+    overflow: auto; }
+    header .wrapper ul li {
+      list-style: none;
+      font-size: 1.3rem;
+      padding: 15px 0; }
+      header .wrapper ul li ul {
+        background: #555;
+        width: 80%;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 0; }
+      header .wrapper ul li a {
+        color: white;
+        opacity: 0.6;
+        transition: 0.4s;
+        text-decoration: none;
+        cursor: pointer; }
+        header .wrapper ul li a:hover {
+          opacity: 1; }
+    header .wrapper .fa-times {
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 10px;
+      color: white;
+      transition: 0.2s;
+      cursor: pointer; }
+      header .wrapper .fa-times:hover {
+        opacity: 1; }
+    header .wrapper .sidenav-header-text {
+      position: relative;
+      padding: 10px 0; }
+      header .wrapper .sidenav-header-text::after {
+        content: '';
+        position: absolute;
+        background: linear-gradient(to right, transparent, white, transparent);
+        opacity: 0.6;
+        width: 100%;
+        height: 5px;
+        bottom: 0;
+        left: 0; }
+
+#home {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/bg.jpg");
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  #home .text h1 {
+    position: absolute;
+    top: 30vh;
+    width: 100%;
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: "Red Rose", cursive;
+    font-weight: lighter;
+    padding: 10px 0; }
+    #home .text h1::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 50%;
+      height: 5px;
+      background: linear-gradient(to right, transparent, white, transparent);
+      left: 25%; }
+  #home .text h3 {
+    position: absolute;
+    top: 55vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.4rem;
+    color: #3498db;
+    font-family: "Varela Round", sans-serif; }
+    #home .text h3 .typed-text {
+      font-family: "Josefin Sans", sans-serif;
+      color: teal; }
+    #home .text h3 .cursor {
+      display: inline-block;
+      width: 5px;
+      background: teal;
+      margin-left: 7px;
+      animation: blink 1s infinite linear; }
+    #home .text h3 .cursor .typing {
+      animation: none; }
+
+@keyframes blink {
+  0%,
+  49%,
+  100% {
+    background: teal; }
+  50%,
+  99% {
+    background: transparent; } }
+  #home .text .bg_foot {
+    position: absolute;
+    top: 90vh;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 0 0 0; }
+    #home .text .bg_foot p {
+      font-family: "Poppins", sans-serif; }
+      #home .text .bg_foot p::before {
+        content: open-quote; }
+      #home .text .bg_foot p::after {
+        content: close-quote; }
+    #home .text .bg_foot::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(to right, transparent, white, transparent); }
+
+.header {
+  font-family: "Righteous", cursive; }
+
+#about .about-img {
+  transition: 0.6s;
+  opacity: 0; }
+
+#about .about-content {
+  transition: 0.6s;
+  opacity: 0; }
+
+#about .carousel {
+  transition: 0.6s;
+  opacity: 0;
+  transform: translateX(-50%); }
+
+#team .card {
+  transition: 0.4s;
+  cursor: pointer; }
+  #team .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.2); }
+
+#contact .header {
+  margin-top: 100px; }
+
+#contact #personal-info {
+  margin-top: 100px;
+  box-shadow: 0 0 25px 15px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-right: 20px; }
+  #contact #personal-info i {
+    padding: 10px;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    margin-right: 7px; }
+
+footer a {
+  text-decoration: none;
+  color: #0d6efd; }
+  footer a:hover {
+    color: #0d6efd; }
+
+@media (max-width: 1200px) {
+  header #lg-nav ul li {
+    font-size: 1.1rem; } }
+
+@media (max-width: 1120px) {
+  header #lg-nav ul li {
+    font-size: 1.1rem;
+    padding: 0 14px; } }
+
+@media (max-width: 1080px) {
+  header #lg-nav {
+    right: 20px; } }
+
+@media (max-width: 1040px) {
+  header #lg-nav {
+    display: none; }
+  header .sidenav-trigger {
+    display: inline-block;
+    cursor: pointer; } }
+
+@media (max-width: 1028px) {
+  #home h3 .typed-text {
+    font-size: 2.2rem; } }
+
+@media (max-width: 960px) {
+  #home h3 {
+    font-size: 2.2rem; } }
+
+@media (max-width: 768px) {
+  #home h3 {
+    font-size: 1.8rem; }
+    #home h3 .typed-text {
+      font-size: 1.8rem; } }
+
+@media (max-width: 425px) {
+  header .logo {
+    font-size: 3rem;
+    left: 20px; }
+  header .sidenav-trigger {
+    right: 20px; }
+  header .wrapper {
+    font-size: 1rem; }
+    header .wrapper .dropdown-list {
+      width: 100%; }
+  #home .text h1 {
+    font-size: 2.4rem; }
+  #home .text h3 {
+    font-size: 1.4rem; }
+    #home .text h3 .typed-text {
+      font-size: 1.4rem; }
+  #home .bg_foot {
+    font-size: 0.8rem; } }
+
+@media (max-width: 320px) {
+  header .logo {
+    font-size: 2.4rem; }
+  header .sidenav-trigger {
+    right: 10px; }
+  header .wrapper nav ul li {
+    font-size: 1rem; }
+  header .wrapper .dropdown-list {
+    font-size: 0.1rem; }
+  #home .text h1 {
+    font-size: 2rem; } }
